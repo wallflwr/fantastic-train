@@ -89,19 +89,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="phonenum" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="phonenum" type="text" class="form-control{{ $errors->has('phonenum') ? ' is-invalid' : '' }}" name="phonenum" value="{{ old('phonenum') }}" required autofocus>
-
-                                @if ($errors->has('phonenum'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('phonenum') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
