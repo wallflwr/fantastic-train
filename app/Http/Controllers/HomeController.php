@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+
 
 class HomeController extends Controller
 {
@@ -23,13 +25,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
-    }
+        $users = User::all();
 
-    public function login()
+         return $users; 
+
+        return view('welcome');
+    }
+}
+
+    /*public function login()
     {
         $data['error'] ="Invalid Login";
-        $this->load->view('auth/header');
+        $this->load->view('auth');
         if($this->input->post())
         {
             $user = $this->UserModel->login($this->input->post());
@@ -39,7 +46,6 @@ class HomeController extends Controller
                     'name' => $user['name'],
                     'email' => $user['email'],
                     'password' => $user['password'],
-                    
                     );
                     $this->session->set_userdata($array);
                     if($user['client_type_id'] == '1'){
@@ -55,20 +61,20 @@ class HomeController extends Controller
 
             //$this->UserModel->login($this->input->post());
             //redirect(base_url('../fms'));
-        }
-        $this->load->view('auth/signin',$data);
-        $this->load->view('auth/footer');
-    }
+        //}
+        //$this->load->view('auth/signin',$data);
+        //$this->load->view('auth/footer');
+    //}
 
-    function admin_dashboard(){ 
-    $this->load->view('admin/header');
-    $this->load->view('admin/home',$data);
-    $this->load->view('admin/footer');
-    }
+    //function admin_dashboard(){ 
+    //$this->load->view('admin/header');
+    //$this->load->view('admin/home',$data);
+    //$this->load->view('admin/footer');
+    //}
 
-    function user_dashboard(){
-    $this->load->view('client/header');
-    $this->load->view('client/home',$data);
-    $this->load->view('client/footer');
-    }
+    //function user_dashboard(){
+    //$this->load->view('client/header');
+    //$this->load->view('client/home',$data);
+    //$this->load->view('client/footer');
+    //}
 }

@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</body>
+</html>
+
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

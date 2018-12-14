@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</body>
+</html>
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -88,8 +95,6 @@
                                 @endif
                             </div>
                         </div>
-
-//https://github.com/ainizafirah/cubatrttest.git
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
