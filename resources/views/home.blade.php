@@ -21,6 +21,10 @@
                         </div>
                     @endif
                    
+                   <div>Name:</div>
+                   
+                   <div>Email:</div>
+                   <div>Age:</div>
                   
                 </div>
             </div>
