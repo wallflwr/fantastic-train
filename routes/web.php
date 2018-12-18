@@ -16,7 +16,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('cart/update/{id}', 'CartController@update');
 
 //Route::get('/projects','ProjectsController@index'):
 
@@ -26,5 +29,12 @@ Route::resource('/user','UserController@index');
 //	return view('user');
 //});
 
+Route::get('/dashboard', [
+	'as' => 'home' ,
+	'uses' => 'LoginController@home' 
+]);
 
-
+Route::get('/prod', [
+	'as' => 'prod.view' ,
+	'uses' => 'ProductController@viewProd' 
+]);

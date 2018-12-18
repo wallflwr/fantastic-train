@@ -33,3 +33,5 @@ class TestController extends Controller
     }
 }
 
+
+        $users -> save ();
